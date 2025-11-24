@@ -1,0 +1,299 @@
+/* ------------------------------------------------------
+   Bootstrap-Like Global Setup 
+------------------------------------------------------ */
+:root {
+    --primary: #0d6efd;
+    --dark: #222;
+    --light: #f8f9fa;
+    --muted: #6c757d;
+    --accent: #0d6efd;
+    --radius: 10px;
+    --shadow: 0 4px 18px rgba(0,0,0,0.08);
+  }
+  
+  body {
+    font-family: 'Inter', sans-serif;
+    background: #f4f6f9;
+    margin: 0;
+    padding: 0;
+    color: var(--dark);
+  }
+  
+  h1, h2, h3, h4 {
+    font-weight: 700;
+  }
+  
+  .small {
+    font-size: 14px;
+  }
+  
+  .muted {
+    color: var(--muted);
+  }
+  
+  /* ------------------------------------------------------
+     Layout
+  ------------------------------------------------------ */
+  .site-wrap {
+    max-width: 1180px;
+    margin: auto;
+    padding: 20px;
+  }
+  
+  /* ------------------------------------------------------
+     NAVBAR — Bootstrap Style
+  ------------------------------------------------------ */
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    padding: 16px 24px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    position: sticky;
+    top: 10px;
+    z-index: 100;
+  }
+  
+  .logo {
+    background: var(--primary);
+    color: white;
+    width: 48px;
+    height: 48px;
+    font-size: 26px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+  }
+  
+  .nav-links a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: var(--dark);
+    font-weight: 500;
+  }
+  
+  .nav-links a:hover {
+    color: var(--primary);
+  }
+  
+  /* Bootstrap button style */
+  .cta-btn {
+    padding: 10px 18px;
+    background: var(--primary);
+    color: white !important;
+    border-radius: var(--radius);
+    text-decoration: none;
+    font-weight: 600;
+    box-shadow: var(--shadow);
+  }
+  
+  /* ------------------------------------------------------
+     HERO SECTION
+  ------------------------------------------------------ */
+  .hero {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 28px;
+    margin-top: 30px;
+    align-items: center;
+  }
+  
+  .tag {
+    background: #e8f0ff;
+    color: var(--primary);
+    padding: 4px 10px;
+    border-radius: var(--radius);
+    font-size: 13px;
+  }
+  
+  .hero-left h2 {
+    font-size: 32px;
+    line-height: 1.3;
+  }
+  
+  /* Profile Card */
+  .profile {
+    background: white;
+    padding: 20px;
+    border-radius: var(--radius);
+    text-align: center;
+    box-shadow: var(--shadow);
+  }
+  
+  .avatar img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: var(--shadow);
+  }
+  
+  .chip {
+    display: inline-block;
+    background: #d1e7dd;
+    color: #0f5132;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+  }
+  
+  /* ------------------------------------------------------
+     SECTIONS
+  ------------------------------------------------------ */
+  .section {
+    margin-top: 60px;
+    background: white;
+    padding: 30px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+  }
+  
+  .section-title h3 {
+    margin: 0;
+  }
+  
+  .section-title .lead {
+    margin-top: 4px;
+    color: var(--muted);
+  }
+  
+  /* ------------------------------------------------------
+     ABOUT + PROJECTS Grid
+  ------------------------------------------------------ */
+  .grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 28px;
+  }
+  
+  .row {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 20px;
+  }
+  
+  .details {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+  }
+  
+  /* ------------------------------------------------------
+     PROJECTS
+  ------------------------------------------------------ */
+  .project {
+    display: flex;
+    align-items: center;
+    padding: 14px;
+    border-radius: var(--radius);
+    background: #f8f9fa;
+    box-shadow: var(--shadow);
+    margin-bottom: 18px;
+  }
+  
+  .project img {
+    width: 70px;
+    height: 70px;
+    border-radius: var(--radius);
+    margin-right: 15px;
+    object-fit: cover;
+  }
+  
+  /* ------------------------------------------------------
+     SERVICES — Bootstrap Card Style
+  ------------------------------------------------------ */
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+  }
+  
+  .service-card {
+    background: var(--light);
+    padding: 20px;
+    border-radius: var(--radius);
+    text-align: center;
+    box-shadow: var(--shadow);
+  }
+  
+  .service-card .icon {
+    font-size: 40px;
+    color: var(--primary);
+    margin-bottom: 10px;
+  }
+  
+  /* ------------------------------------------------------
+     SKILLS
+  ------------------------------------------------------ */
+  .skill {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+  
+  .meter {
+    width: 60%;
+    background: #e9ecef;
+    height: 10px;
+    border-radius: var(--radius);
+    overflow: hidden;
+  }
+  
+  .meter span {
+    display: block;
+    height: 100%;
+    background: var(--primary);
+    width: 0;
+    transition: width 1s ease;
+  }
+  
+  .info-card {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+  }
+  
+  .btn-primary {
+    display: inline-block;
+    padding: 10px 18px;
+    background: var(--primary);
+    color: white;
+    border-radius: var(--radius);
+    text-decoration: none;
+    font-weight: 600;
+    box-shadow: var(--shadow);
+  }
+  
+  /* ------------------------------------------------------
+     FORMS (Contact Page)
+  ------------------------------------------------------ */
+  .form input,
+  .form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 14px;
+    border-radius: var(--radius);
+    border: 1px solid #ced4da;
+    font-size: 15px;
+  }
+  
+  .form button {
+    width: 100%;
+  }
+  
+  /* ------------------------------------------------------
+     FOOTER
+  ------------------------------------------------------ */
+  footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+    color: var(--muted);
+  }
+  
